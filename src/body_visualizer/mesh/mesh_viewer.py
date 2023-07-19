@@ -25,7 +25,29 @@ import os
 #     
 
 import numpy as np
-from body_visualizer.tools.vis_tools import colors
+colors = {
+    'pink': [.6, .0, .4],
+    'purple': [.9, .7, .7],
+    'cyan': [.7, .75, .5],
+    'red': [1.0, 0.0, 0.0],
+
+    'green': [.0, 1., .0],
+    'yellow': [1., 1., 0],
+    'brown': [.5, .2, .1],
+    'brown-light': [0.654, 0.396, 0.164],
+    'blue': [.0, .0, 1.],
+
+    'offwhite': [.8, .9, .9],
+    'white': [1., 1., 1.],
+    'orange': [1., .2, 0],
+
+    'grey': [.7, .7, .7],
+    'grey-blue': [0.345, 0.580, 0.713],
+    'black': np.zeros(3),
+    'white': np.ones(3),
+
+    'yellowg': [0.83, 1, 0],
+}
 import trimesh
 import pyrender
 import sys
@@ -157,6 +179,8 @@ class MeshViewer(object):
         cv2.imwrite(fname, color_img)
 
 if __name__ == '__main__':
+    print("test")
+    """
     from human_body_prior.tools.omni_tools import copy2cpu as c2c
     from human_body_prior.body_model.body_model import BodyModel
     from supercap.marker_layout_detection.tools import marker_layout_as_points, equal_aspect_ratio, visualize3DData
@@ -175,3 +199,4 @@ if __name__ == '__main__':
     body_mesh = trimesh.Trimesh(vertices=body_v, faces=faces, vertex_colors=np.tile(colors['grey'], (n_verts, 1)))
     mv.set_dynamic_meshes([body_mesh])
     #clicked_markers = visualize3DData(markers, superset_data['labels'], body_verts = c2c(body.v[0]))
+    """
