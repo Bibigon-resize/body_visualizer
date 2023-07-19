@@ -158,7 +158,7 @@ class MeshViewer(object):
 
 if __name__ == '__main__':
     print("test")
-
+    """
     from human_body_prior.tools.omni_tools import copy2cpu as c2c
     from human_body_prior.body_model.body_model import BodyModel
     from supercap.marker_layout_detection.tools import marker_layout_as_points, equal_aspect_ratio, visualize3DData
@@ -177,4 +177,4 @@ if __name__ == '__main__':
     body_mesh = trimesh.Trimesh(vertices=body_v, faces=faces, vertex_colors=np.tile(colors['grey'], (n_verts, 1)))
     mv.set_dynamic_meshes([body_mesh])
     #clicked_markers = visualize3DData(markers, superset_data['labels'], body_verts = c2c(body.v[0]))
-
+    """
